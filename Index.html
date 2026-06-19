@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            My To-Do List Life Dashboard
+        </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="pre_container2">
+            <div class="container">
+                <div class="grid-item">
+                    <span id="headerText">Too bright? Try this one here ---></span>
+                </div>
+                <div class="grid-item">
+                    <button id="themeToggle" onclick="toggleTheme()">🌙 Dark Mode</button>
+                </div>
+            </div>
+        </header>
+
+        <section class="pre_container1">
+            <h1 class="timing">
+                <span id="currentTime"></span>
+            </h1>
+            <p id="day-to-date"></p>
+            <b><p id="greetings"></p></b>
+        </section>
+
+        <section class="two-panel">
+            <div class="pre_container">
+                <h2><b>Focus Timer ⏱️</b></h2>
+                <h1 class="timing" id="countDown">25:00</h1>
+                <br>
+                <div class="grid-item">
+                    <button class="stopwatch" id="startBtn" onclick="startStop()">▶ Start</button>
+                    <button class="stopwatch" id="resetBtn" onclick="resetTimer()">↺ Reset</button>
+                    <button class="stopwatch" id="changeBtn" onclick="toggleChangeInput()">⏲ Change</button>
+                </div>
+                <div id="changeInputRow" style="display:none; margin-top: 8px;">
+                    <input type="number" id="customMinutes" min="1" max="99" placeholder="min" style="width:60px; font-size:1.2rem; text-align:center; border-radius:6px; border:2px solid #a89cd4; padding:4px;">
+                    <button class="adding" onclick="applyCustomTimer()">Set</button>
+                </div>
+            </div>
+            <div class="pre_container tasks-card">
+                <h2>Tasks 📝</h2>
+                <div class="task-input-row">
+                    <input type="text" id="taskInput" placeholder="Add a new task...">
+                    <button class="adding" id="addTaskBtn" onclick="addTask()">Add</button>
+                </div>
+                <ul id="taskList"></ul>
+            </div>
+        </section>
+        <section class="two-panel">
+            <div class="pre_container">
+                <h2>Quick Links 🔗</h2>
+                <div class="task-input-row">
+                    <input type="text" id="linkName" placeholder="Link name">
+                    <input type="text" id="linkUrl" placeholder="URL">
+                    <button class="adding" id="addLinkBtn">Add</button>
+                </div>
+                <div id="link-container" class="link-container"></div>
+            </div>
+            <div class="pre_blank tasks-card"></div>
+        </section>
+
+        <footer style="background-color: aquamarine;">
+            <p style="text-align: center;">&copy; 2026 Setiawan Putra Hendratno</p>
+        </footer>
+        <script src="script.js" defer></script>
+    </body>
+</html>

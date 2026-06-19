@@ -1,0 +1,408 @@
+:root{
+    --base-color: rgb(255, 255, 255);
+    --base-variant: rgb(238, 244, 211);
+    --text-color: #111526;
+    --secondary-text: #232738;
+    --primary-color: #3a435d;
+    --accent-color: #0071ff;
+}
+
+.darkmode{
+    --base-color: rgb(2, 8, 7);
+    --base-variant: rgb(30, 32, 21);
+    --text-color: #ebebeb;
+    --secondary-text: #d0d4cd;
+    --primary-color: #3a435d;
+    --accent-color: #0071ff;
+}
+
+body{
+    background: linear-gradient(to right, #B69FF5, #864BBD 50%, #864BBD 75%)
+}
+header{
+    font-family: monospace;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+h1{
+    font-family:monospace;
+    font-size: 3rem;
+}
+
+h2{
+    font-family:monospace;
+    text-align: center;
+    margin: 10px 0px 10px 0px;
+}
+
+
+button{
+    max-width: 65%;
+    font-size: 1rem;
+}
+
+.stopwatch{
+    background-color: #e2d6ed;
+    width: 90px;
+    height: 72px;
+    margin: 5px;
+    border: 0px;
+    border-radius: 5%;
+}
+
+.stopwatch:hover{
+    color: #ebebeb;
+    background-color: #864BBD;
+    transition: background-color 0.3s ease;
+}
+
+#day-to-date{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+#greetings{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 3rem;
+    margin-top: -8px;
+}
+
+.timing {
+    text-align: center;
+    color: #6b56a7;
+    margin: 40px 0 -10px;
+}
+h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 35px;
+}
+p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+.pre_container1{
+    display: grid;
+    grid-template-columns: 1fr; /* 1 col in desktop */
+    gap: 2px;
+    max-width: 100%;
+    margin: 0px 25px 0px 25px;
+    padding: 5px;
+    background-color: var(--base-color);
+    color: var(--text-color);
+    border-radius: 10px;
+    box-shadow: 0 20px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pre_container2{
+    display: grid;
+    grid-template-columns: 1fr; /* 1 col in desktop */
+    gap: 2px;
+    max-width: 100%;
+    margin: 5px 25px 5px 25px;
+    padding: 5px;
+    background-color: var(--base-color);
+    color: var(--text-color);
+    border-radius: 10px;
+    box-shadow: 0 20px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pre_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 50%;
+    min-height: 300px;
+    margin: 0;
+    padding: 10px;
+    background-color: var(--base-color);
+    color: var(--text-color);
+    border-radius: 10px;
+    box-shadow: 0 20px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pre_blank{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 48%;
+    min-height: 300px;
+    margin: 0;
+    padding: 10px;
+    background-color:rgba(0, 0, 0, 0);
+    color: var(--text-color);
+    border-radius: 10px;
+    box-shadow: 0 20px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 4 cols in desktop */
+    gap: 10px;
+    max-width: 100%;
+    margin: 5px;
+    padding: 5px;
+    background-color: var(--base-variant);
+    border-radius: 10px;
+    box-shadow: 0 20px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+.grid-item{
+    max-width: 625px;
+    color: var(--text-color);
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0,3s ease;
+}
+.grid-item:hover{
+    transform: scale(1.02);
+}
+
+#themeToggle {
+    cursor: pointer;
+    padding: 6px 14px;
+    border-radius: 6px;
+    border: 2px solid #333;
+    background-color: white;
+    color: #333;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+#themeToggle.btn-dark {
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+.grid-item2{
+    max-width: 625px;
+    background-color: blanchedalmond;
+    color: rgb(132, 39, 8);
+    padding: 2px;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0,3s ease;
+}
+.grid-item2:hover{
+    transform: scale(1.02);
+    background-color: #f9c4f5;
+}
+.box_flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+label{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+@media (max-width: 600px){
+    .container{
+        grid-template-columns: 1fr; /*1 col in mobile */
+    }
+    .grid-item{
+        padding: 10px;
+    }
+}
+
+.links-container {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Social media column — single column, embeds fill available width */
+.container-social {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.container-social .grid-item {
+    width: 100%;
+    box-sizing: border-box;
+}
+.container-social iframe {
+    display: block;
+    width: 100%;
+}
+
+/* Tasks panel */
+.task-input-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+.task-input-row input {
+    flex: 1;
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 2px solid #a89cd4;
+    border-radius: 6px;
+    outline: none;
+}
+.task-input-row input:focus {
+    border-color: #6b56a7;
+}
+.adding {
+    padding: 8px 16px;
+    background-color: #6b56a7;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.adding:hover {
+    background-color: #4e3d80;
+}
+#taskList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    background-color: var(--base-variant, #f5f5f5);
+    border-radius: 6px;
+}
+.task-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+.task-label {
+    flex: 1;
+    font-size: 1rem;
+    font-family: 'Segoe UI', sans-serif;
+}
+.task-done {
+    text-decoration: line-through;
+    color: #999;
+}
+.task-delete {
+    padding: 4px 10px;
+    background-color: #e05555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+.task-delete:hover {
+    background-color: #b83030;
+}
+
+/* Two-panel flex layout */
+.two-panel {
+    display: flex;
+    gap: 5px;
+    margin: 5px 25px 5px 25px;
+    align-items: stretch;
+}
+.two-panel > .pre_container {
+    flex: 1;
+}
+@media (max-width: 600px) {
+    .two-panel {
+        flex-direction: column;
+    }
+}
+
+/* Make the Tasks card an internal flex column so title stays visible */
+.tasks-card {
+    display: flex;
+    flex-direction: column;
+    height: 300px;        /* fixed height so the card doesn't grow infinitely */
+}
+.tasks-card h2 {
+    flex-shrink: 0;       /* title never compressed */
+}
+.tasks-card .task-input-row {
+    flex-shrink: 0;       /* input row never compressed */
+}
+.tasks-card #taskList {
+    flex: 1;              /* takes remaining space */
+    overflow-y: auto;     /* scrolls when tasks overflow */
+    min-height: 0;        /* required for flex children to scroll correctly */
+}
+
+/* Change timer input row */
+#changeInputRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+#customMinutes {
+    width: 60px;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 6px;
+    border: 2px solid #a89cd4;
+    padding: 4px;
+}
+#customMinutes:focus {
+    outline: none;
+    border-color: #6b56a7;
+}
+
+/* Quick Links */
+.link-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 4px 0;
+}
+.link-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background-color: #6b56a7;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-family: 'Segoe UI', sans-serif;
+    transition: background-color 0.2s ease;
+}
+.link-tag:hover {
+    background-color: #4e3d80;
+}
+.delete-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8rem;
+    padding: 0;
+    line-height: 1;
+    opacity: 0.7;
+}
+.delete-btn:hover {
+    opacity: 1;
+}
+
+/* Full-width card override */
+.full-width {
+    max-width: 100%;
+    margin: 5px 25px;
+}
