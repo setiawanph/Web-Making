@@ -123,6 +123,17 @@ function addTask() {
     const text  = input.value.trim();
     if (!text) return;
 
+    // Prevent duplicates (case-insensitive)
+    const existing = document.querySelectorAll('#taskList .task-label');
+    const isDuplicate = Array.from(existing).some(function (label) {
+        return label.textContent.toLowerCase() === text.toLowerCase();
+    });
+    if (isDuplicate) {
+        alert('Task "' + text + '" already exists.');
+        input.select();
+        return;
+    }
+
     const li       = document.createElement('li');
     li.className   = 'task-item';
 
